@@ -1,0 +1,186 @@
+:root {
+
+  ---bg-color: white;
+  ---color: black;
+  --textColor: #000;
+  ---white: white;
+  ---black: rgb(44, 43, 43);
+
+  --bg-dark-mode: #333;
+  --textColor-dark-mode: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(---bg-color);
+  color: var(--textColor);
+  transition-duration: 0.3s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dark-theme {
+  ---bg-color: var(--bg-dark-mode);
+  --textColor: var(--textColor-dark-mode)
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: right;
+  margin-right: 2rem;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 1.2rem;
+}
+
+.toggle-btn svg {
+  margin-top: 1rem;
+}
+
+.form-container {
+  width: 80vw;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-container h2 {
+  text-transform: capitalize;
+  color: lightseagreen;
+
+  font-size: 3rem;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input {
+  width: 65vw;
+  height: 2rem;
+  border: 1px solid gray;
+  text-indent: 10px;
+}
+
+.input::placeholder {
+  text-transform: capitalize;
+}
+
+.input:focus {
+  outline: none;
+}
+
+
+.btn {
+  width: 5rem;
+  height: 2rem;
+  background-color: darkcyan;
+  border-color: transparent;
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.image-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+
+.image {
+  width: 80vw;
+  height: 15rem;
+  object-fit: cover;
+}
+
+@media(prefers-color-scheme:dark) {
+  :root {
+    ---bg-color: var(--bg-dark-mode);
+    --textColor: var(--textColor-dark-mode)
+  }
+}
+
+@media screen and (min-width:800px) {
+  .form-container {
+    width: 50vw;
+    margin-left: 15rem;
+  }
+
+  form {
+    width: 50vw;
+    display: flex;
+  }
+
+  .input {
+    width: 40vw;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+
+  }
+
+  .image {
+    width: 40vw;
+    height: 25vh;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width:1092px) {
+
+  .form-container {
+    width: 50vw;
+    margin-left: 20rem;
+  }
+
+  .input {
+    width: 45vw;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 25rem;
+    height: 12rem;
+    object-fit: cover;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
