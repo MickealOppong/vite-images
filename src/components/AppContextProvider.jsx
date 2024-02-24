@@ -22,8 +22,6 @@ const AppContextProvider = ({ children }) => {
     localStorage.setItem('darkTheme', newTheme)
   }
 
-  console.log(getInitialMode());
-
   useEffect(() => {
     document.body.classList.toggle('dark-theme', darkTheme);
   }, [darkTheme])
