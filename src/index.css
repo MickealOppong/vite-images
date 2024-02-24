@@ -114,12 +114,15 @@ form {
   object-fit: cover;
 }
 
+/*
+
 @media(prefers-color-scheme:dark) {
   :root {
     ---bg-color: var(--bg-dark-mode);
     --textColor: var(--textColor-dark-mode)
   }
 }
+*/
 
 @media screen and (min-width:800px) {
   .form-container {
